@@ -6,6 +6,8 @@
 4. Top K Frequent Elements: we store each value as a key and number of occurrence as value, then we check the longest occurrence using for loop, to see how many k occurrence of times it happened.
 5. Product of Array Except Self: We use prefix and postfix method, multiple each number n-1 and than we do another loop from right side to left side, doing the something. than we add those number to find hte number of product in the array, except self.
 6. Longest Consecutive Sequence: we create a current value and the longest value, and create a set of the value, to remove duplicates. then we check to see if n-1 exists, and loop through it increasing current value by 1, until there is no more then we insert it into the longest value if it's bigger or not. than return the longest value number.
+7. review group anagram don't remember doing it.
+
 
 # notes
 Week 1: Arrays & Hashing Patterns Review (Sept 22 - Sept 27)
