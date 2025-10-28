@@ -47,3 +47,33 @@ Key Insight: (Simultaneous Recursive Comparison) Correct logic. The key is the s
 Your Recall: we create a helper function the same as tree Same tree. and in our main function we check first if not subRoot then return true then check if not root than return false. then we call our helper function and check if true. after that we call our main function 2nd recursion isSubtree(root.left,subRoot) and isSubtree(root.right,subRoot) and return it's output if none of these if conditions are met we return false. (Minor Correction: Last part should imply returning the result of the OR, not False)
 
 Key Insight: (Recursion + Helper) Correct structure. Main function checks 3 things: 1. isSameTree(root, subRoot)? If yes, True. 2. OR isSubtree(root.left, subRoot)? 3. OR isSubtree(root.right, subRoot)? Base cases handle empty root and subRoot.
+
+
+
+Marathon Week 2 - Day 1 Review (Oct 27): Introduction to Trees & Recursion
+
+Today we began exploring Trees, focusing on fundamental recursive patterns for traversal and comparison.
+
+1. 104. Maximum Depth of Binary Tree
+
+Your Recall: we use recursion to solve this, returning the result of 1 + max(self.maxDepth(root.left), self.maxDepth(root.right)) this will calculate the depth.
+
+Key Insight: (Recursive Depth Calculation - MASTERED!) Base Case: Depth of None is 0. Recursive Step: Depth is 1 + max(depth(left), depth(right)).
+
+2. 226. Invert Binary Tree
+
+Your Recall: we swap right with left and left with right node, and then we recursively call the function and write the inverse for both right and left node.
+
+Key Insight: (Recursive Swap - MASTERED!) Base Case: If node is None, return. Recursive Step: 1. Swap node.left and node.right. 2. Recurse on node.left. 3. Recurse on node.right.
+
+3. 100. Same Tree
+
+Your Recall: we check if the root is null for both, then return true. then we check if all these conditions are false, not p, not q or p.val!=q.val if these conditions are met then it's false. then we call our recursion function by calling the function itself again isSameTree(p.left,q.left) and isSameTree(p.right,q.right).
+
+Key Insight: (Simultaneous Recursive Comparison - MASTERED!) Base Cases: 1. Both None? -> True. 2. One None OR vals differ? -> False. Recursive Step: Return (check lefts) AND (check rights).
+
+4. 572. Subtree of Another Tree
+
+Your Recall: we create a helper function the same as tree Same tree. and in our main function we check first if not subRoot then return true then check if not root than return false. then we call our helper function and check if true. after that we call our main function 2nd recursion isSubtree(root.left,subRoot) and isSubtree(root.right,subRoot) and return it's output.
+
+Key Insight: (Recursion + Helper - MASTERED!) Use isSameTree helper. Main function isSubtree(root, subRoot) logic: 1. Base cases (subRoot is None -> True; root is None -> False). 2. Check if isSameTree(root, subRoot). 3. If not, return isSubtree(root.left, subRoot) OR isSubtree(root.right, subRoot).
